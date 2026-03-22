@@ -8,17 +8,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        ekablue: '#2563eb',
-                        ekaorange: '#f97316',
-                        terminal: '#0f172a',
-                    }
-                }
+    theme: {
+        extend: {
+            animation: {
+                'spin-slow': 'spin 6s linear infinite',
+            },
+            colors: {
+                ekablue: '#2563eb',
+                ekaorange: '#f97316',
+                terminal: '#0f172a',
             }
         }
+    }
+}
+
     </script>
+    <style>
+    #typewriter-text::after {
+        content: "_";
+        animation: blink 1s infinite;
+        color: #f97316;
+        margin-left: 2px;
+    }
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+</style>
 </head>
 
 <body class="bg-terminal text-slate-300 font-mono">
@@ -55,23 +71,30 @@
 </section>
 
 <script>
-    // Petit effet d'écriture automatique simple
-    const text = "Nous transformons des lignes de code en moteurs de croissance...";
-    let i = 0;
-    const speed = 50;
+    /**
+     * EFFET TYPEWRITER PRO
+     * Utilise un ID spécifique pour éviter les conflits avec d'autres classes .italic
+     */
+    const typewriterElement = document.getElementById('typewriter-text');
+    const textToType = "Nous transformons des lignes de code en moteurs de croissance...";
+    let charIndex = 0;
+    const typingSpeed = 45; // Vitesse légèrement ajustée pour la lisibilité
     
-    function typeWriter() {
-        if (i < text.length) {
-            document.querySelector('.italic').innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+    function startTyping() {
+        if (typewriterElement && charIndex < textToType.length) {
+            typewriterElement.innerHTML += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(startTyping, typingSpeed);
         }
     }
-    // Vider le paragraphe avant de lancer
-    window.onload = () => {
-        document.querySelector('.italic').innerHTML = "";
-        typeWriter();
-    };
+
+    // On lance l'effet proprement une fois le DOM chargé
+    window.addEventListener('load', () => {
+        if (typewriterElement) {
+            typewriterElement.innerHTML = ""; // On vide le texte de secours
+            startTyping();
+        }
+    });
 </script>
 
     <header class="py-16 px-6 max-w-5xl mx-auto">
@@ -84,9 +107,9 @@
             <h1 class="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
                 <span class="text-ekablue">dev@ekatech:</span><span class="text-ekaorange">~</span>$ list --skills
             </h1>
-            <p class="text-lg text-slate-400 mb-8 font-sans italic">
-                Nous transformons des lignes de code en moteurs de croissance pour votre entreprise.
-            </p>
+            <p id="typewriter-text" class="text-lg text-slate-400 mb-8 font-sans italic">
+    Nous transformons des lignes de code en moteurs de croissance pour votre entreprise.
+</p>
             <div class="flex flex-wrap gap-4 text-xs">
                 <div class="flex items-center gap-2 bg-slate-900 px-3 py-2 rounded border border-slate-800">
                     <i class="fa-brands fa-html5 text-ekaorange"></i> Frontend Architecture
@@ -114,6 +137,12 @@
                 <div class="relative bg-terminal rounded-2xl overflow-hidden border border-slate-700 aspect-video flex items-center justify-center p-6">
                     <img src="../../public/img/portfolio/logos/logo-freelink.png" alt="Freelink Project" class="max-h-full transition-transform duration-500 group-hover:scale-110">
                 </div>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+    <span class="px-2 py-1 bg-slate-800 text-cyan-400 text-[10px] rounded border border-slate-700">React Query</span>
+    <span class="px-2 py-1 bg-slate-800 text-emerald-400 text-[10px] rounded border border-slate-700">JWT Auth</span>
+    <span class="px-2 py-1 bg-slate-800 text-purple-400 text-[10px] rounded border border-slate-700">FFmpeg</span>
+</div>
                 <div class="mt-4 flex justify-between text-[10px] text-slate-500 uppercase tracking-tighter">
                     <span>Project: IPTV Platform</span>
                     <span>Status: In Development (75%)</span>
