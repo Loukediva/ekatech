@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement & Forge Digitale | EKA Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ekablue: '#2563eb',
+                        ekaorange: '#f97316',
+                        terminal: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-terminal text-slate-300 font-mono">
+
+    <nav class="flex justify-between items-center p-6 border-b border-slate-800 bg-terminal/90 sticky top-0 z-50 backdrop-blur-md">
+        <a href="index.html" class="text-2xl font-black tracking-tighter text-ekablue italic">
+            EKA<span class="text-white">TECH</span>
+        </a>
+        <div class="flex items-center gap-4">
+            <span class="hidden md:inline text-[10px] text-emerald-500 font-bold animate-pulse">// SYSTEM_ONLINE</span>
+            <a href="index.html" class="text-xs bg-slate-800 text-white px-4 py-2 rounded border border-slate-700 hover:bg-ekablue transition">exit()</a>
+        </div>
+    </nav>
+
+    <section class="py-12 px-6 max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-center group hover:border-ekablue transition">
+            <i class="fa-brands fa-react text-3xl mb-2 text-cyan-400 group-hover:animate-spin-slow"></i>
+            <p class="text-[10px] font-bold uppercase">React / Next.js</p>
+        </div>
+        <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-center group hover:border-ekaorange transition">
+            <i class="fa-brands fa-node-js text-3xl mb-2 text-emerald-500"></i>
+            <p class="text-[10px] font-bold uppercase">Node.js / Express</p>
+        </div>
+        <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-center group hover:border-blue-400 transition">
+            <i class="fa-solid fa-code-branch text-3xl mb-2 text-slate-400"></i>
+            <p class="text-[10px] font-bold uppercase">Git / GitHub</p>
+        </div>
+        <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/50 text-center group hover:border-yellow-500 transition">
+            <i class="fa-brands fa-python text-3xl mb-2 text-yellow-500"></i>
+            <p class="text-[10px] font-bold uppercase">Python / Automation</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Petit effet d'écriture automatique simple
+    const text = "Nous transformons des lignes de code en moteurs de croissance...";
+    let i = 0;
+    const speed = 50;
+    
+    function typeWriter() {
+        if (i < text.length) {
+            document.querySelector('.italic').innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    // Vider le paragraphe avant de lancer
+    window.onload = () => {
+        document.querySelector('.italic').innerHTML = "";
+        typeWriter();
+    };
+</script>
+
+    <header class="py-16 px-6 max-w-5xl mx-auto">
+        <div class="bg-slate-900 rounded-t-xl border-x border-t border-slate-700 p-3 flex gap-2">
+            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+        </div>
+        <div class="bg-slate-950 p-8 rounded-b-xl border border-slate-700 shadow-2xl">
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                <span class="text-ekablue">dev@ekatech:</span><span class="text-ekaorange">~</span>$ list --skills
+            </h1>
+            <p class="text-lg text-slate-400 mb-8 font-sans italic">
+                Nous transformons des lignes de code en moteurs de croissance pour votre entreprise.
+            </p>
+            <div class="flex flex-wrap gap-4 text-xs">
+                <div class="flex items-center gap-2 bg-slate-900 px-3 py-2 rounded border border-slate-800">
+                    <i class="fa-brands fa-html5 text-ekaorange"></i> Frontend Architecture
+                </div>
+                <div class="flex items-center gap-2 bg-slate-900 px-3 py-2 rounded border border-slate-800">
+                    <i class="fa-solid fa-database text-ekablue"></i> Backend & API
+                </div>
+                <div class="flex items-center gap-2 bg-slate-900 px-3 py-2 rounded border border-slate-800">
+                    <i class="fa-solid fa-mobile-screen-button text-emerald-500"></i> App Mobile
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="flex items-center gap-4 mb-10">
+            <div class="h-[1px] flex-1 bg-slate-800"></div>
+            <h2 class="text-xl font-black text-white italic uppercase tracking-widest">Étude de Cas : Freelink</h2>
+            <div class="h-[1px] flex-1 bg-slate-800"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-900/30 p-8 rounded-3xl border border-slate-800">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-ekablue to-ekaorange rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative bg-terminal rounded-2xl overflow-hidden border border-slate-700 aspect-video flex items-center justify-center p-6">
+                    <img src="../../public/img/portfolio/logos/logo-freelink.png" alt="Freelink Project" class="max-h-full transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="mt-4 flex justify-between text-[10px] text-slate-500 uppercase tracking-tighter">
+                    <span>Project: IPTV Platform</span>
+                    <span>Status: In Development (75%)</span>
+                </div>
+            </div>
+
+            <div class="font-sans">
+                <span class="text-ekaorange font-bold text-xs uppercase tracking-widest">Le Défi</span>
+                <h3 class="text-2xl font-black text-white mb-4 italic">Digitaliser l'expérience IPTV</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Développement d'une interface utilisateur ultra-rapide permettant la gestion de flux vidéo, d'abonnements et d'une bibliothèque multimédia pour Freelink.
+                </p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start gap-3 text-xs text-slate-300 italic">
+                        <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                        <span>Optimisation des temps de réponse (ReactJS / Node.js).</span>
+                    </div>
+                    <div class="flex items-start gap-3 text-xs text-slate-300 italic">
+                        <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                        <span>Base de données sécurisée pour les utilisateurs.</span>
+                    </div>
+                    <div class="flex items-start gap-3 text-xs text-slate-300 italic">
+                        <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                        <span>Interface responsive (Mobile, Tablette, Smart TV).</span>
+                    </div>
+                </div>
+                <span class="text-[10px] text-ekablue font-bold">STABLE_BUILD : 75%</span>
+
+                <div class="flex gap-4">
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-ekablue h-full w-[75%] animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-slate-900">
+        <p class="text-[10px] text-slate-600 mb-8 font-mono">
+            &lt;!-- COMMIT_LOG : EKA_TECH_V2.0_STABLE --&gt;
+        </p>
+        <a href="index.html" class="inline-block px-8 py-3 bg-white text-terminal font-black rounded hover:bg-ekablue hover:text-white transition uppercase text-xs tracking-widest">
+            Initialiser un projet
+        </a>
+    </footer>
+
+</body>
+</html>

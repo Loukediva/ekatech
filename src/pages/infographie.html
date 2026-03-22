@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EKA Tech - Studio créatif d'infographie au Togo. Expertise en ethno-futurisme, branding IPTV, logos et supports de communication.">
+    <link rel="icon" type="image/png" href="../../public/img/logos/favicon.png">
+    <title>Portfolio Infographie | EKA Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ekablue: '#2563eb',
+                        ekaorange: '#f97316',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900 font-sans">
+
+    <nav class="flex justify-between items-center p-6 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <a href="index.html" class="text-2xl font-black tracking-tighter text-ekablue italic">
+            EKA<span class="text-slate-800">TECH</span>
+        </a>
+        <ul class="hidden md:flex gap-6 text-sm font-bold text-slate-500">
+            <li><a href="index.html#services" class="hover:text-ekablue transition">Services</a></li>
+            <li><a href="reseau.html" class="hover:text-ekablue transition text-ekablue font-bold">WiFi & Réseaux</a></li>
+        </ul>
+
+        <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-ekablue transition flex items-center gap-2">
+            <i class="fa-solid fa-house"></i> Accueil
+        </a>
+    </nav>
+
+    <header class="py-20 px-6 bg-gradient-to-br from-slate-900 to-ekablue text-white text-center">
+        <span class="inline-block bg-ekaorange px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4">Studio Créatif</span>
+        <h1 class="text-4xl md:text-6xl font-black mb-6 italic leading-tight">L'image qui <br><span class="text-ekaorange underline decoration-white">propulse</span> votre marque.</h1>
+        <p class="text-blue-100 max-w-xl mx-auto italic">Logos, Cartes graphiques, Flyers et Supports de communication sur-mesure.</p>
+    </header>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button data-filter="all" class="px-6 py-2 bg-slate-900 text-white rounded-full text-sm font-bold shadow-lg">Tous les projets</button>
+        <button data-filter="logos" class="px-6 py-2 bg-slate-100 text-slate-600 hover:bg-ekaorange hover:text-white rounded-full text-sm font-bold transition">Logos</button>
+        <button data-filter="branding" class="px-6 py-2 bg-slate-100 text-slate-600 hover:bg-ekaorange hover:text-white rounded-full text-sm font-bold transition">Branding</button>
+        <button data-filter="digital" class="px-6 py-2 bg-slate-100 text-slate-600 hover:bg-ekaorange hover:text-white rounded-full text-sm font-bold transition">Digital</button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div data-category="logos" class="duration-500 transition-all group relative overflow-hidden rounded-3xl bg-slate-100 aspect-square shadow-xl hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-t from-ekablue/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white z-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-ekaorange mb-2">Identité Visuelle / Branding</span>
+                <h3 class="text-2xl font-black italic mb-4">Projet Freelink</h3>
+                <p class="text-sm text-blue-100 mb-6">Plateforme IPTV : Création d'un logo moderne.</p>
+                <button onclick="openLightbox('../../public/img/portfolio/logos/logo-freelink.png', 'Projet Freelink - IPTV Brand')" class="w-fit border border-white/50 px-6 py-2 rounded-full text-xs font-bold hover:bg-white hover:text-ekablue transition">Voir le projet</button>
+            </div>
+            <img src="../../public/img/portfolio/logos/logo-freelink.png" alt="Logo Freelink" class="absolute inset-0 w-full h-full object-contain p-8">
+        </div>
+
+        <div data-category="branding" class="group relative overflow-hidden rounded-3xl bg-slate-100 aspect-square shadow-xl transition-all hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-t from-ekablue/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white z-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-ekaorange mb-2">Promotion / Branding</span>
+                <h3 class="text-2xl font-black italic mb-4">Flyer Beauty Salon</h3>
+                <p class="text-sm text-blue-100 mb-6">Design publicitaire élégant.</p>
+                <button onclick="openLightbox('../../public/img/portfolio/branding/charte-beaute.png', 'Design Flyer - Beauty Salon')" class="w-fit border border-white/50 px-6 py-2 rounded-full text-xs font-bold hover:bg-white hover:text-ekablue transition">Voir le projet</button>
+            </div>
+            <img src="../../public/img/portfolio/branding/charte-beaute.png" alt="Flyer Beauty" class="absolute inset-0 w-full h-full object-contain p-8">
+        </div>
+
+        <div data-category="logos" class="duration-500 transition-all group relative overflow-hidden rounded-3xl bg-slate-100 aspect-square shadow-xl hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-t from-ekablue/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white z-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-ekaorange mb-2">Identité Visuelle</span>
+                <h3 class="text-2xl font-black italic mb-4">EKA Tech Brand</h3>
+                <p class="text-sm text-blue-100 mb-6">Ethno-futurisme et innovation numérique.</p>
+                <button onclick="openLightbox('../../public/img/portfolio/logos/logo-ekatech.png', 'EKA Tech - Identité visuelle officielle')" class="w-fit border border-white/50 px-6 py-2 rounded-full text-xs font-bold hover:bg-white hover:text-ekablue transition">Voir le projet</button>
+            </div>
+            <img src="../../public/img/portfolio/logos/logo-ekatech.png" alt="Logo EKA Tech" class="absolute inset-0 w-full h-full object-contain p-12 transition-transform duration-500 group-hover:scale-110">
+        </div>
+
+        <div data-category="digital" class="group relative overflow-hidden rounded-3xl bg-slate-100 aspect-square shadow-xl transition-all hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-t from-ekablue/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white z-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-ekaorange mb-2">UI Design / Digital</span>
+                <h3 class="text-2xl font-black italic mb-4">Interface IPTV</h3>
+                <p class="text-sm text-blue-100 mb-6">Expérience utilisateur fluide et moderne.</p>
+                <button onclick="openLightbox('../../public/img/portfolio/digital/iptv-ui.png', 'UX/UI Design - Plateforme Vidéo')" class="w-fit border border-white/50 px-6 py-2 rounded-full text-xs font-bold hover:bg-white hover:text-ekablue transition">Voir le projet</button>
+            </div>
+            <img src="../../public/img/portfolio/digital/iptv-ui.png" alt="IPTV Digital Design" class="absolute inset-0 w-full h-full object-contain p-8">
+        </div>
+
+    </div>
+</section>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/90 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl z-[110] hover:text-ekaorange">&times;</button>
+        <div class="relative max-w-5xl max-h-[90vh] scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl">
+            <p id="lightbox-caption" class="text-center text-white mt-4 font-bold italic"></p>
+        </div>
+    </div>
+
+    <section class="py-20 bg-slate-50 text-center">
+        <h2 class="text-3xl font-black italic mb-4">Un projet graphique en tête ?</h2>
+        <a href="index.html#openModal" class="bg-ekablue text-white px-10 py-4 rounded-full font-black shadow-xl hover:bg-blue-700 transition uppercase text-sm tracking-widest">Demande de projet</a>
+    </section>
+
+    <section class="py-24 px-6 bg-slate-900 text-white overflow-hidden relative">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-ekablue/20 blur-3xl rounded-full -mr-32 -mt-32"></div>
+    
+    <div class="max-w-4xl mx-auto relative z-10">
+        <span class="text-ekaorange font-black uppercase tracking-widest text-xs mb-4 block">L'esprit EKA Tech</span>
+        <h2 class="text-3xl md:text-5xl font-black italic mb-8 leading-tight">
+            Fusionner l'héritage et le <span class="text-ekablue">futur numérique</span>.
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-12 text-slate-300 leading-relaxed italic">
+            <p>
+                Chez <strong>EKA Tech</strong>, nous ne créons pas seulement des images ; nous forgeons des identités. Notre approche repose sur l'<strong>ethno-futurisme</strong> : l'art de marier les racines culturelles profondes avec une esthétique technologique d'avant-garde. 
+            </p>
+            <p>
+                Que ce soit pour le branding d'une plateforme <strong>IPTV</strong>, l'élégance d'un <strong>salon de beauté</strong> ou l'innovation d'une <strong>startup</strong>, nous optimisons chaque pixel pour que votre message soit aussi performant que visuellement percutant.
+            </p>
+        </div>
+        
+        <div class="mt-12 flex flex-wrap gap-8 items-center border-t border-slate-800 pt-12">
+            <div>
+                <span class="block text-2xl font-black text-white">100%</span>
+                <span class="text-xs uppercase tracking-tighter text-slate-500">Sur-mesure</span>
+            </div>
+            <div>
+                <span class="block text-2xl font-black text-white">Togo</span>
+                <span class="text-xs uppercase tracking-tighter text-slate-500">Base Créative</span>
+            </div>
+            <div>
+                <span class="block text-2xl font-black text-white">AI-Powered</span>
+                <span class="text-xs uppercase tracking-tighter text-slate-500">Innovation</span>
+            </div>
+        </div>
+        <div class="mt-16 flex justify-start">
+    <a href="../../public/docs/brochure-ekatech.pdf" download class="group relative inline-flex items-center gap-4 bg-white text-slate-900 px-8 py-4 rounded-full font-black overflow-hidden transition-all hover:pr-12">
+        <span class="relative z-10 uppercase tracking-widest text-sm">Télécharger mon Portfolio (PDF)</span>
+        <i class="fa-solid fa-arrow-down relative z-10 group-hover:translate-y-1 transition-transform"></i>
+        <div class="absolute inset-0 bg-ekaorange translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+    </a>
+</div>
+    </div>
+</section>
+
+<section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-4xl font-black italic mb-6 leading-tight">Prêt à donner vie à <br><span class="text-ekablue">votre vision</span> ?</h2>
+            <p class="text-slate-500 mb-8 italic">Besoin d'un logo, d'une interface IPTV ou d'une identité visuelle complète ? Discutons de votre projet.</p>
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-ekablue">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-bold text-slate-400 uppercase tracking-widest">Email</span>
+                        <a href="mailto:ekatech2@gmail.com" class="font-bold hover:text-ekaorange transition">ekatech2@gmail.com</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-ekablue">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-bold text-slate-400 uppercase tracking-widest">WhatsApp</span>
+                        <a href="https://wa.me/22871876547" target="_blank" class="font-bold hover:text-ekaorange transition">+228 71 87 65 47</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-2xl border border-slate-100">
+            <form action="https://formspree.io/f/xreyvvqv" method="POST" class="space-y-4">
+    <input type="hidden" name="_next" value="merci.html">
+    
+    <input type="hidden" name="_subject" value="Nouveau Projet Infographie - EKA Tech">
+    
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div class="grid md:grid-cols-2 gap-4">
+        <input type="text" name="nom" placeholder="Nom complet" required 
+               class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm">
+        
+        <input type="email" name="email" placeholder="Email" required 
+               class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm">
+    </div>
+
+    <select name="type_projet" required 
+            class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm text-slate-500 font-sans">
+        <option value="">Type de projet</option>
+        <option value="logo">Logo & Branding</option>
+        <option value="digital">Digital / IPTV</option>
+        <option value="autre">Autre demande</option>
+    </select>
+
+    <textarea name="message" placeholder="Décrivez brièvement votre projet..." rows="4" required 
+              class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm"></textarea>
+
+    <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-ekablue transition-all shadow-lg shadow-blue-900/10 active:scale-95">
+        Envoyer le message
+    </button>
+</form>
+        </div>
+    </div>
+</section>
+
+    <footer class="py-12 border-t border-slate-100 text-center text-slate-400 text-sm">
+        <p>&copy; 2026 EKA Tech | Togo</p>
+    </footer>
+
+    <script>
+        // Nouveau système de filtrage par data-attributes
+const filterButtons = document.querySelectorAll('[data-filter]');
+const projects = document.querySelectorAll('[data-category]');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // 1. Gestion de l'apparence des boutons
+        filterButtons.forEach(b => {
+            b.classList.remove('bg-slate-900', 'text-white', 'shadow-lg');
+            b.classList.add('bg-slate-100', 'text-slate-600');
+        });
+        btn.classList.add('bg-slate-900', 'text-white', 'shadow-lg');
+        btn.classList.remove('bg-slate-100', 'text-slate-600');
+
+        // 2. Logique de filtrage
+        // Remplacez la partie Logique de filtrage par celle-ci
+const filterValue = btn.getAttribute('data-filter');
+
+projects.forEach(p => {
+    // On cache tout d'abord avec une animation
+    p.style.opacity = '0';
+    p.style.transform = 'scale(0.95)';
+    
+    setTimeout(() => {
+        if (filterValue === 'all' || p.getAttribute('data-category') === filterValue) {
+            p.classList.remove('hidden');
+            // Petit délai pour l'apparition
+            setTimeout(() => {
+                p.style.opacity = '1';
+                p.style.transform = 'scale(1)';
+            }, 50);
+        } else {
+            p.classList.add('hidden');
+        }
+    }, 200); // Temps de la transition
+});
+    });
+});
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCap = document.getElementById('lightbox-caption');
+
+        function openLightbox(src, cap) {
+            lightboxImg.src = src;
+            lightboxCap.innerText = cap;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightbox.querySelector('div').classList.remove('scale-95');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            lightbox.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+            }, 300);
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>

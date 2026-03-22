@@ -1,0 +1,10 @@
+# Autoriser tous les robots à explorer le site EKA Tech
+User-agent: *
+Allow: /
+
+# Bloquer l'accès aux dossiers de développement ou sensibles
+Disallow: /src/
+Disallow: /private/
+
+# Emplacement de la sitemap (à adapter avec votre futur nom de domaine)
+Sitemap: https://votre-domaine.com/sitemap.xml

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>WiFi Zone & Solutions Réseaux à Hahotoé | EKA Tech</title>
+    <meta name="description" content="Expert en déploiement réseau à Hahotoé. Installation de ponts radio Ubiquiti, configuration MikroTik et WiFi Zone sécurisée pour entreprises et espaces publics.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ekablue: '#2563eb',
+                        ekaorange: '#f97316',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="flex justify-between items-center p-6 bg-white shadow-sm sticky top-0 z-50">
+    <a href="index.html" class="text-2xl font-black tracking-tighter text-ekablue italic">
+        EKA<span class="text-slate-800">TECH</span>
+    </a>
+    <div class="flex items-center gap-6">
+        <ul class="hidden md:flex gap-6 text-sm font-bold text-slate-500">
+            <li><a href="index.html#services" class="hover:text-ekablue transition">Services</a></li>
+            <li><a href="infographie.html" class="hover:text-ekablue transition">Portfolio</a></li>
+        </ul>
+        <a href="index.html" class="text-sm font-bold text-ekablue border-l pl-6 border-slate-200">
+            <i class="fa-solid fa-arrow-left mr-2"></i>Retour
+        </a>
+    </div>
+</nav>
+
+    <header class="py-16 px-6 bg-ekablue text-white text-center">
+        <h1 class="text-4xl md:text-5xl font-black mb-4 italic">Solutions Réseaux & WiFi</h1>
+        <p class="text-blue-100 max-w-2xl mx-auto">Installation haute performance et maintenance d'infrastructures connectées pour PME et espaces publics.</p>
+    </header>
+
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+                <span class="text-ekaorange font-black uppercase tracking-widest text-sm">Expertise #1</span>
+                <h2 class="text-3xl font-bold mt-2 mb-6 italic">Déploiement WiFi Zone</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Nous transformons votre espace en un véritable hotspot connecté. Que ce soit pour un café, un hôtel ou une entreprise, nos solutions **WiFi Zone** garantissent une couverture totale et une gestion simplifiée des utilisateurs.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 font-medium text-slate-700"><i class="fa-solid fa-circle-check text-green-500"></i> Portails captifs personnalisés</li>
+                    <li class="flex items-center gap-3 font-medium text-slate-700"><i class="fa-solid fa-circle-check text-green-500"></i> Gestion de la bande passante</li>
+                    <li class="flex items-center gap-3 font-medium text-slate-700"><i class="fa-solid fa-circle-check text-green-500"></i> Sécurisation WPA3 & Firewall</li>
+                </ul>
+            </div>
+            <div class="bg-slate-200 aspect-video rounded-3xl shadow-inner flex items-center justify-center text-slate-400 overflow-hidden">
+                <i class="fa-solid fa-wifi text-9xl opacity-20"></i>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center flex-row-reverse">
+             <div class="bg-slate-200 aspect-video rounded-3xl shadow-inner flex items-center justify-center text-slate-400 md:order-1">
+                <i class="fa-solid fa-laptop-medical text-9xl opacity-20"></i>
+            </div>
+            <div class="md:order-2">
+                <span class="text-ekaorange font-black uppercase tracking-widest text-sm">Expertise #2</span>
+                <h2 class="text-3xl font-bold mt-2 mb-6 italic">Maintenance & Bureautique</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Un parc informatique performant est la clé de votre productivité. **EKA Tech** assure l'installation de vos postes de travail, serveurs et périphériques, tout en garantissant un support technique réactif.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 font-medium text-slate-700"><i class="fa-solid fa-circle-check text-blue-500"></i> Audit et nettoyage système</li>
+                    <li class="flex items-center gap-3 font-medium text-slate-700"><i class="fa-solid fa-circle-check text-blue-500"></i> Configuration d'imprimantes réseau</li>
+                    <li class="flex items-center gap-3 font-medium text-slate-700"><i class="fa-solid fa-circle-check text-blue-500"></i> Sauvegarde de données (Cloud/Local)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 py-16 px-6 text-center text-white">
+        <h2 class="text-3xl font-bold mb-6 italic">Besoin d'une installation réseau ?</h2>
+        <p class="mb-8 text-slate-400">Nos techniciens se déplacent pour évaluer vos besoins sur site.</p>
+        <button onclick="openModalReseau()" class="bg-ekaorange text-white px-10 py-4 rounded-xl font-black hover:scale-105 transition inline-block uppercase cursor-pointer">Demander une étude gratuite</button>
+    </section>
+
+    <section class="py-24 px-6 bg-slate-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-16">
+            <span class="text-ekablue font-black uppercase tracking-widest text-xs">Étude de Cas #01</span>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 italic">Déploiement Réseau : <br><span class="text-ekaorange">WIFI PASSE PARTOUT</span></h2>
+        </div>
+
+        <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100 flex flex-col lg:flex-row">
+            <div class="lg:w-1/2 bg-slate-900 p-12 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-20">
+                    <i class="fa-solid fa-network-wired text-[200px] -rotate-12 translate-x-10"></i>
+                </div>
+                <div class="relative z-10">
+                    <div class="inline-block p-4 bg-white/10 rounded-2xl backdrop-blur-md mb-6">
+                        <i class="fa-solid fa-tower-cell text-5xl text-ekaorange"></i>
+                    </div>
+                    <h3 class="text-white text-2xl font-black italic mb-2">Interconnexion Multi-Bâtiments</h3>
+                    <p class="text-slate-400 text-sm italic">Ubiquiti & MikroTik Infrastructure</p>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 p-8 md:p-16">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-ekablue font-black uppercase text-xs tracking-widest mb-4">Le Défi</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed italic">
+                            Fournir un accès internet stable à 3 bâtiments distants de 500m, gérer le débit de 200 élèves simultanément et sécuriser l'accès administratif.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-4 bg-slate-50 rounded-2xl border-l-4 border-ekaorange">
+                            <span class="block font-black text-slate-900 text-sm mb-1">Pont Radio PTP</span>
+                            <p class="text-[11px] text-slate-500 italic">Liaison sans fil 5GHz haute performance entre les blocs.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl border-l-4 border-ekablue">
+                            <span class="block font-black text-slate-900 text-sm mb-1">VLAN Segmentation</span>
+                            <p class="text-[11px] text-slate-500 italic">Séparation stricte entre le réseau WiFi Élèves et l'Administration.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="block text-2xl font-black text-ekablue italic">100%</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Couverture Totale</span>
+                        </div>
+                        <div class="h-10 w-[1px] bg-slate-200"></div>
+                        <div>
+                            <span class="block text-2xl font-black text-emerald-500 italic">0.5ms</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Latence Optimisée</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="security" class="py-24 px-6 bg-slate-900 relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ekablue/5 rounded-full animate-pulse"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16">
+            <span class="text-emerald-500 font-black uppercase tracking-[0.3em] text-xs italic">Protection Intégrale</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mt-4 italic">Un réseau <span class="text-ekablue underline decoration-emerald-500">impénétrable</span>.</h2>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto italic">Nous ne nous contentons pas de vous connecter. Nous érigeons une barrière numérique entre vos données et les menaces extérieures.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all duration-500 group">
+                <div class="w-14 h-14 bg-emerald-500/10 text-emerald-500 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4 italic">Pare-feu Avancé</h3>
+                <p class="text-slate-400 text-sm leading-relaxed italic">Installation de règles de filtrage MikroTik pour bloquer les tentatives d'intrusion et les sites malveillants avant qu'ils n'atteignent vos PC.</p>
+            </div>
+
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700 hover:border-ekablue transition-all duration-500 group">
+                <div class="w-14 h-14 bg-ekablue/10 text-ekablue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-ekablue group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-user-lock"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4 italic">Isolation Client</h3>
+                <p class="text-slate-400 text-sm leading-relaxed italic">Sur votre WiFi Zone, chaque utilisateur est isolé : personne ne peut accéder aux fichiers ou au téléphone de son voisin de connexion.</p>
+            </div>
+
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700 hover:border-ekaorange transition-all duration-500 group">
+                <div class="w-14 h-14 bg-ekaorange/10 text-ekaorange rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-ekaorange group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4 italic">Contrôle Parental</h3>
+                <p class="text-slate-400 text-sm leading-relaxed italic">Pour les écoles et foyers, nous filtrons les contenus inappropriés pour garantir une navigation saine et sécurisée pour les mineurs.</p>
+            </div>
+
+        </div>
+
+        <div class="mt-16 p-8 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4 text-emerald-500">
+                <i class="fa-solid fa-circle-check animate-pulse"></i>
+                <span class="text-xs font-black uppercase tracking-widest italic">Analyse de vulnérabilité gratuite incluse</span>
+            </div>
+            <button onclick="openModalReseau()" class="px-8 py-3 bg-white text-slate-900 font-black rounded-xl hover:bg-emerald-500 hover:text-white transition text-xs uppercase italic cursor-pointer">Sécuriser mon entreprise</button>
+        </div>
+    </div>
+</section>
+
+<div class="text-center pb-16 bg-slate-50">
+    <a href="index.html#wifi-tarifs" class="text-ekablue font-black border-b-2 border-ekablue pb-1 hover:text-ekaorange hover:border-ekaorange transition italic">
+        <i class="fa-solid fa-tag mr-2"></i> Consulter nos forfaits WiFi Zone à Hahotoé
+    </a>
+</div>
+
+<section class="py-12 bg-white border-y border-slate-100">
+    <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+    <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/ubiquiti.svg" alt="Ubiquiti" class="h-6 md:h-8">
+    
+    <img src="https://cdn.worldvectorlogo.com/logos/mikrotik.svg" alt="MikroTik" class="h-6 md:h-8">
+    
+    <img src="https://cdn.worldvectorlogo.com/logos/tp-link-2.svg" alt="TP-Link" class="h-6 md:h-8">
+    
+    <img src="https://cdn.worldvectorlogo.com/logos/cisco-2.svg" alt="Cisco" class="h-6 md:h-8">
+
+</div>
+</section>
+
+    <footer class="py-8 text-center text-slate-500 text-sm">
+        &copy; 2026 EKA Tech - Hahotoé, Togo
+    </footer>
+
+    <div id="modalReseau" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+    <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden relative">
+        <button onclick="closeModalReseau()" class="absolute top-4 right-4 text-slate-400 hover:text-ekablue transition text-2xl">&times;</button>
+        
+        <div class="p-8">
+            <h3 class="text-2xl font-black italic mb-2">Étude de projet <span class="text-ekablue text-lg">Réseau & WiFi</span></h3>
+            <p class="text-slate-500 text-sm mb-6 italic">Décrivez vos besoins (PME, Hôtel, Domicile) et nous vous contacterons pour une évaluation sur site.</p>
+            
+            <form action="https://formspree.io/f/xreyvvqv" method="POST" class="space-y-4">
+                <input type="hidden" name="_next" value="merci.html">
+                <input type="hidden" name="_subject" value="Nouvelle demande Réseau/WiFi - EKA Tech">
+
+                <input type="text" name="nom" placeholder="Nom complet ou Entreprise" required 
+                       class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm">
+                
+                <input type="tel" name="telephone" placeholder="Numéro de téléphone" required 
+                       class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm">
+
+                <select name="service_souhaite" required 
+                        class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm text-slate-500">
+                    <option value="">Besoin principal...</option>
+                    <option value="wifi-zone">Déploiement WiFi Zone</option>
+                    <option value="maintenance">Maintenance Parc Informatique</option>
+                    <option value="securite">Sécurité & Pare-feu</option>
+                    <option value="interconnexion">Interconnexion Multi-sites</option>
+                </select>
+
+                <textarea name="message" placeholder="Détails (ex: nombre de bureaux, surface...)" rows="3" 
+                          class="w-full px-6 py-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-ekablue outline-none transition text-sm"></textarea>
+
+                <button type="submit" class="w-full bg-ekablue text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-slate-900 transition-all shadow-lg">
+                    Envoyer ma demande
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModalReseau() {
+        const modal = document.getElementById('modalReseau');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Empêche le défilement derrière
+    }
+
+    function closeModalReseau() {
+        const modal = document.getElementById('modalReseau');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto'; // Réactive le défilement
+    }
+
+    // Fermer la modal si on clique à côté du formulaire
+    window.onclick = function(event) {
+        const modal = document.getElementById('modalReseau');
+        if (event.target == modal) {
+            closeModalReseau();
+        }
+    }
+</script>
+
+</body>
+</html>
