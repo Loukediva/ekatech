@@ -12,6 +12,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
+
+        .faq-content {
+        transition: max-height 0.3s ease-out;
+        }
+        .rotate-180 {
+          transform: rotate(180deg);
+        }
     </style>
     <script>
         tailwind.config = {
@@ -538,51 +545,48 @@
 </section>
 
 <script>
-    // Script pour l'accordéon FAQ
-document.querySelectorAll('.faq-item button').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        const icon = button.querySelector('i');
-        
-        // Fermer les autres
-        document.querySelectorAll('.faq-content').forEach(other => {
-            if (other !== content) {
-                other.style.maxHeight = null;
-                other.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
-            }
-        });
-
-        // Toggle l'élément actuel
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-            icon.style.transform = 'rotate(0deg)';
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-            icon.style.transform = 'rotate(180deg)';
-        }
-    });
-});
-</script>
-
-<script>
-    const btnMenu = document.getElementById('mobile-menu-button');
-    const menuItems = document.getElementById('mobile-menu');
+    // GESTION DU MENU MOBILE
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
 
-    btnMenu.addEventListener('click', () => {
-        // Affiche ou cache le menu
-        menuItems.classList.toggle('hidden');
-        
-        // Change l'icône (Bars <-> Xmark)
-        menuIcon.classList.toggle('fa-bars');
-        menuIcon.classList.toggle('fa-xmark');
-    });
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Change l'icône de bars à xmark
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
+        });
+    }
 
-    // Fermer le menu automatiquement quand on clique sur un lien (pour les ancres comme #services)
+    // Fermer le menu lors du clic sur un lien mobile
     document.querySelectorAll('.mobile-link').forEach(link => {
         link.addEventListener('click', () => {
-            menuItems.classList.add('hidden');
+            mobileMenu.classList.add('hidden');
             menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        });
+    });
+
+    // GESTION DE L'ACCORDÉON FAQ
+    document.querySelectorAll('.faq-item button').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            document.querySelectorAll('.faq-content').forEach(other => {
+                if (other !== content) {
+                    other.style.maxHeight = null;
+                    other.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
         });
     });
 </script>
