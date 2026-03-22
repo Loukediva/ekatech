@@ -28,19 +28,38 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-50">
-        <div class="text-2xl font-black tracking-tighter text-ekablue italic">
-            EKA<span class="text-slate-800">TECH</span>
+    <nav class="bg-white shadow-md sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter text-ekablue italic">
+                EKA<span class="text-slate-800">TECH</span>
+            </div>
+
+            <ul class="hidden md:flex space-x-6 font-semibold text-sm uppercase tracking-wide">
+                <li><a href="#services" class="hover:text-ekablue transition">Services</a></li>
+                <li><a href="src/pages/infographie.html" class="hover:text-ekablue transition">Portfolio</a></li>
+                <li><a href="src/pages/reseau.html" class="hover:text-ekablue transition text-ekablue font-bold">WiFi & Réseaux</a></li>
+                <li><a href="src/pages/programmation.html" class="hover:text-ekablue transition text-emerald-600 font-black">Programmation</a></li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <button id="openModal" class="hidden sm:block bg-ekablue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-lg uppercase text-xs tracking-wide">
+                    DEVIS GRATUIT
+                </button>
+                
+                <button id="mobile-menu-button" class="md:hidden text-slate-800 text-2xl focus:outline-none p-2">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
         </div>
-        <ul class="hidden md:flex space-x-6 font-semibold text-sm uppercase tracking-wide">
-            <li><a href="#services" class="hover:text-ekablue transition">Services</a></li>
-            <li><a href="src/pages/infographie.html" class="hover:text-ekablue transition">Portfolio</a></li>
-            <li><a href="src/pages/reseau.html" class="hover:text-ekablue transition text-ekablue font-bold">WiFi & Réseaux</a></li>
-            <li><a href="src/pages/programmation.html" class="hover:text-ekablue transition text-emerald-600 font-black">Programmation</a></li>
-        </ul>
-        <button id="openModal" class="bg-ekablue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-lg uppercase text-sm tracking-wide cursor-pointer">
-    DEVIS GRATUIT
-</button>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <ul class="flex flex-col p-6 gap-4 font-bold text-sm uppercase tracking-wide text-slate-600">
+                <li><a href="#services" class="mobile-link block hover:text-ekablue py-2">Services</a></li>
+                <li><a href="src/pages/infographie.html" class="mobile-link block hover:text-ekablue py-2 border-t border-slate-50">Portfolio</a></li>
+                <li><a href="src/pages/reseau.html" class="mobile-link block hover:text-ekablue py-2 border-t border-slate-50">WiFi & Réseaux</a></li>
+                <li><a href="src/pages/programmation.html" class="mobile-link block text-emerald-600 py-2 border-t border-slate-50">Programmation</a></li>
+            </ul>
+        </div>
     </nav>
 
     <header class="relative py-24 px-6 overflow-hidden bg-slate-900 text-white text-center">
@@ -544,5 +563,29 @@ document.querySelectorAll('.faq-item button').forEach(button => {
     });
 });
 </script>
+
+<script>
+    const btnMenu = document.getElementById('mobile-menu-button');
+    const menuItems = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    btnMenu.addEventListener('click', () => {
+        // Affiche ou cache le menu
+        menuItems.classList.toggle('hidden');
+        
+        // Change l'icône (Bars <-> Xmark)
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-xmark');
+    });
+
+    // Fermer le menu automatiquement quand on clique sur un lien (pour les ancres comme #services)
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            menuItems.classList.add('hidden');
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        });
+    });
+</script>
+
 </body>
 </html>
