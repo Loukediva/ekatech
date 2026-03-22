@@ -19,6 +19,11 @@
         .rotate-180 {
           transform: rotate(180deg);
         }
+
+        html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -416,6 +421,21 @@
     const btnClose = document.getElementById('closeModal');
     const otherBtns = document.querySelectorAll('.open-modal-btn'); // Tous les autres boutons
 
+    // Déclarer les fonctions de manière globale pour qu'elles soient accessibles partout
+    window.openFunc = () => {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeFunc = () => {
+        if (!modal) return;
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    };
+
     // Fonction pour ouvrir
     const openFunc = () => {
         modal.classList.remove('hidden');
@@ -460,7 +480,7 @@
 </script>
 
 
-<div class="fixed bottom-6 right-6 z-[100] group">
+<div class="fixed bottom-6 right-6 z-[90] group">
     <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-slate-900 text-white text-[10px] font-black py-2 px-4 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-xl border border-slate-700 uppercase tracking-widest">
         Besoin d'un ticket ?
     </span>

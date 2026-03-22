@@ -670,6 +670,10 @@ video {
   z-index: 110;
 }
 
+.z-\[90\] {
+  z-index: 90;
+}
+
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
